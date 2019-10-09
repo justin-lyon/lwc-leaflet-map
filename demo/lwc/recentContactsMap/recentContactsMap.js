@@ -6,7 +6,7 @@ export default class RecentContactsMap extends LightningElement {
   @track map
   @track error
 
-  @api height
+  @api height = '20rem'
 
   onMapInit () {
     this.map = this.template.querySelector('.leaflet-map')
