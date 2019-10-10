@@ -25,8 +25,8 @@ Pass record data with lat/lng geolocation to the leaflet-map, and the leaflet ma
 <template>
   <c-leaflet-map class="leaflet-map"
     height={height}
-    oninit={onMapInit}
-    onmarkerclick={onMarkerClick}></c-leaflet-map>
+    onready={onMapInit}
+    onpinclick={onMarkerClick}></c-leaflet-map>
 </template>
 ```
 ```javascript

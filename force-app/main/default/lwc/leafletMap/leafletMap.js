@@ -82,8 +82,8 @@ export default class LeafletMap extends LightningElement {
   }
 
   fireMapReady () {
-    const init = new CustomEvent('init')
-    this.dispatchEvent(init)
+    const ready = new CustomEvent('ready')
+    this.dispatchEvent(ready)
   }
 
   clickMarker (self, { layer }) {
@@ -91,10 +91,10 @@ export default class LeafletMap extends LightningElement {
   }
 
   fireMarker (layer) {
-    const markerClick = new CustomEvent('markerclick', {
+    const pinclick = new CustomEvent('pinclick', {
       detail: layer.options.record.Id
     })
 
-    this.dispatchEvent(markerClick)
+    this.dispatchEvent(pinclick)
   }
 }
